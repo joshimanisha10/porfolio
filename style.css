@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap'); 
+
+:root{
+ --body-color: #05070E;
+ --blue: #166EE6;
+ --white: #F1F3F7;
+ --gray: #8491A0;
+ --pink: #E95D90;
+ --green: #3CC74E;
+ --footer-color: #181823;
+   --animate-delay: 0.5s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+*{
+  color: var(--white);
+}
+@font-face {
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   src: url(font/GILLSANS.ttf);
+}
+
+.main{
+   background-color: var(--body-color);
+   margin: 0px;
+   padding: 0;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   overflow-x: hidden;
+   box-sizing: border-box;
+}
+
+p{
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--white);
+}
+
+h1{
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+h2{
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--blue);
+}
+
+.code{
+  font-weight: 400;
+  font-family: 'Fuzzy Bubbles', cursive;
+  color: var(--white);
+  opacity: 0.6;
+  font-family: 'Kalam', cursive;
+}
+
+.mj{
+   font-size: 30px; 
+   opacity: 0.9;
+   font-weight: 700;
+}
+
+sub{
+ color: var(--blue);
+}
+
+i{
+color: var(--blue);
+font-size: 20px;
+padding: 0px 10px;
+}
+
+i:hover{
+font-size: 30px;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+/* button */
+
+.btn {
+ display: block;
+ padding: 0.7em 1em;
+ background: transparent;
+ outline: none;
+ border: 0;
+ color: var(--blue);
+ letter-spacing: 0.1em;
+ font-size: 18px;
+ font-weight: bold;
+ z-index: 1;
+}
+
+.cube {
+ position: relative;
+ transition: all 0.5s;
+}
+
+.cube .bg-top {
+ position: absolute;
+ height: 10px;
+ background: var(--blue);
+ bottom: 100%;
+ left: 5px;
+ right: -5px;
+ transform: skew(-45deg, 0);
+ margin: 0;
+ transition: all 0.4s;
+}
+
+.cube .bg-top .bg-inner {
+ bottom: 0;
+}
+
+.cube .bg {
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ top: 0;
+ right: 0;
+ background: var(--blue);
+ transition: all 0.4s;
+}
+
+.cube .bg-right {
+ position: absolute;
+ background: var(--blue);
+ top: -5px;
+ z-index: 0;
+ bottom: 5px;
+ width: 10px;
+ left: 100%;
+ transform: skew(0, -45deg);
+ transition: all 0.4s;
+}
+
+.cube .bg-right .bg-inner {
+ left: 0;
+}
+
+.cube .bg-inner {
+ background: var(--body-color);
+ position: absolute;
+ left: 2px;
+ right: 2px;
+ top: 2px;
+ bottom: 2px;
+}
+
+.cube .text {
+ position: relative;
+ transition: all 0.4s;
+}
+
+.cube:hover .bg-inner {
+ background: var(--blue);
+ transition: all 0.4s;
+}
+
+.cube:hover .text {
+ color: var(--white);
+ transition: all 0.4s;
+}
+
+.cube:hover .bg-right,
+.cube:hover .bg,
+.cube:hover .bg-top {
+ background: var(--body-color);
+}
+
+.cube:active {
+ z-index: 9999;
+ animation: bounce .1s linear;
+}
+
+@keyframes bounce {
+ 50% {
+  transform: scale(0.9);
+ }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 400px) {
+  i{
+font-size: 18px;
+}
+i:hover{
+font-size: 25px;
+}
+
+.mj{
+   font-size: 20px; 
+}
+}
+
+/* hero */
+.hero h1{
+    font-weight: 400;
+  font-size: 70px;
+  color: var(--white);
+}
+
+.hero .intro{
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero .text-right{
+ text-align: center;
+}
