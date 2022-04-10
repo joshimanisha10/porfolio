@@ -288,9 +288,9 @@ a {
 
 @media screen and (max-width: 430px) {
   .design1 {
-    width: 21vw;
-    height: 7vh;
-    background-color: aqua;
+    width: 25vw;
+    height: 3vh;
+    background-color: var(--blue);
     position: absolute;
     top: 110px;
     left: 120px;
@@ -306,8 +306,8 @@ a {
 
   .design2 {
     width: 29vw;
-    height: 8vh;
-    background-color: aqua;
+    height: 3vh;
+    background-color: var(--blue);
     position: absolute;
     top: 150px;
     left: 30px;
