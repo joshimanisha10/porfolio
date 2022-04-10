@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 
-:root{
- --body-color: #05070E;
- --blue: #166EE6;
- --white: #F1F3F7;
- --gray: #8491A0;
- --pink: #E95D90;
- --green: #3CC74E;
- --footer-color: #181823;
-   --animate-delay: 0.5s;
+:root {
+  --body-color: #05070e;
+  --blue: #166ee6;
+  --white: #f1f3f7;
+  --gray: #8491a0;
+  --pink: #e95d90;
+  --green: #3cc74e;
+  --footer-color: #181823;
+  --animate-delay: 0.5s;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,206 +17,307 @@
   }
 }
 
-*{
+* {
   color: var(--white);
 }
 @font-face {
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   src: url(font/GILLSANS.ttf);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url(font/GILLSANS.ttf);
 }
 
-.main{
-   background-color: var(--body-color);
-   margin: 0px;
-   padding: 0;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   overflow-x: hidden;
-   box-sizing: border-box;
+.main {
+  background-color: var(--body-color);
+  margin: 0px;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-p{
+p {
   font-weight: 400;
   font-size: 16px;
   color: var(--white);
 }
 
-h1{
+h1 {
   font-weight: 400;
   font-size: 30px;
   color: var(--white);
   text-transform: capitalize;
 }
 
-h2{
+h2 {
   font-weight: 700;
   font-size: 20px;
   color: var(--blue);
 }
 
-.code{
+.code {
   font-weight: 400;
-  font-family: 'Fuzzy Bubbles', cursive;
+  font-family: "Fuzzy Bubbles", cursive;
   color: var(--white);
   opacity: 0.6;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
 }
 
-.mj{
-   font-size: 30px; 
-   opacity: 0.9;
-   font-weight: 700;
+span {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 700;
 }
 
-sub{
- color: var(--blue);
+.mj {
+  font-size: 30px;
+  opacity: 0.9;
+  font-weight: 700;
 }
 
-i{
-color: var(--blue);
-font-size: 20px;
-padding: 0px 10px;
+sub {
+  color: var(--blue);
 }
 
-i:hover{
-font-size: 30px;
+i {
+  color: var(--blue);
+  font-size: 20px;
+  padding: 0px 10px;
 }
 
+i:hover {
+  font-size: 25px;
+}
 
-a{
+a {
   text-decoration: none;
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 800px) {
+  .hero h1 {
+    font-size: 36px !important;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 /* button */
 
 .btn {
- display: block;
- padding: 0.7em 1em;
- background: transparent;
- outline: none;
- border: 0;
- color: var(--blue);
- letter-spacing: 0.1em;
- font-size: 18px;
- font-weight: bold;
- z-index: 1;
+  display: block;
+  padding: 0.7em 1em;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: var(--blue);
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1;
 }
 
 .cube {
- position: relative;
- transition: all 0.5s;
+  position: relative;
+  transition: all 0.5s;
 }
 
 .cube .bg-top {
- position: absolute;
- height: 10px;
- background: var(--blue);
- bottom: 100%;
- left: 5px;
- right: -5px;
- transform: skew(-45deg, 0);
- margin: 0;
- transition: all 0.4s;
+  position: absolute;
+  height: 10px;
+  background: var(--blue);
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+  transition: all 0.4s;
 }
 
 .cube .bg-top .bg-inner {
- bottom: 0;
+  bottom: 0;
 }
 
 .cube .bg {
- position: absolute;
- left: 0;
- bottom: 0;
- top: 0;
- right: 0;
- background: var(--blue);
- transition: all 0.4s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background: var(--blue);
+  transition: all 0.4s;
 }
 
 .cube .bg-right {
- position: absolute;
- background: var(--blue);
- top: -5px;
- z-index: 0;
- bottom: 5px;
- width: 10px;
- left: 100%;
- transform: skew(0, -45deg);
- transition: all 0.4s;
+  position: absolute;
+  background: var(--blue);
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+  transition: all 0.4s;
 }
 
 .cube .bg-right .bg-inner {
- left: 0;
+  left: 0;
 }
 
 .cube .bg-inner {
- background: var(--body-color);
- position: absolute;
- left: 2px;
- right: 2px;
- top: 2px;
- bottom: 2px;
+  background: var(--body-color);
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
 }
 
 .cube .text {
- position: relative;
- transition: all 0.4s;
+  position: relative;
+  transition: all 0.4s;
 }
 
 .cube:hover .bg-inner {
- background: var(--blue);
- transition: all 0.4s;
+  background: var(--blue);
+  transition: all 0.4s;
 }
 
 .cube:hover .text {
- color: var(--white);
- transition: all 0.4s;
+  color: var(--white);
+  transition: all 0.4s;
 }
 
 .cube:hover .bg-right,
 .cube:hover .bg,
 .cube:hover .bg-top {
- background: var(--body-color);
+  background: var(--body-color);
 }
 
 .cube:active {
- z-index: 9999;
- animation: bounce .1s linear;
+  z-index: 9999;
+  animation: bounce 0.1s linear;
 }
 
 @keyframes bounce {
- 50% {
-  transform: scale(0.9);
- }
+  50% {
+    transform: scale(0.9);
+  }
 }
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 400px) {
-  i{
-font-size: 18px;
-}
-i:hover{
-font-size: 25px;
-}
+  i {
+    font-size: 18px;
+  }
+  i:hover {
+    font-size: 20px;
+  }
 
-.mj{
-   font-size: 20px; 
-}
+  .mj {
+    font-size: 20px;
+  }
 }
 
 /* hero */
-.hero h1{
-    font-weight: 400;
+.hero {
+  margin: 20px;
+}
+.hero h1 {
+  font-weight: 400;
   font-size: 70px;
   color: var(--white);
 }
 
-.hero .intro{
+.hero .intro {
   display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.hero .text-right{
- text-align: center;
+.hero .text-right {
+  text-align: center;
+}
+
+.main-img {
+  width: 120%;
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1400px) {
+  .design1 {
+    width: 12vw;
+    height: 5vh;
+    background-color: aqua;
+    position: absolute;
+    top: 250px;
+    right: 280px;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(22, 110, 230, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+
+  .design2 {
+    width: 15vw;
+    height: 5vh;
+    background-color: aqua;
+    position: absolute;
+    top: 330px;
+    left: 50px;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(22, 110, 230, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+
+  .line1 {
+    width: 50%;
+    position: absolute;
+    top: 500px;
+    left: 200px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .design1 {
+    width: 21vw;
+    height: 7vh;
+    background-color: aqua;
+    position: absolute;
+    top: 110px;
+    left: 120px;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(22, 110, 230, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+
+  .design2 {
+    width: 29vw;
+    height: 8vh;
+    background-color: aqua;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(22, 110, 230, 1) 100%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
 }
